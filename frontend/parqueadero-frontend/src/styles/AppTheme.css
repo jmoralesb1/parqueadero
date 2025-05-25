@@ -1,0 +1,185 @@
+/* src/styles/AppTheme.css */
+
+body {
+  background: #f6fbff;
+  font-family: 'Segoe UI', 'Montserrat', 'Roboto', Arial, sans-serif;
+  color: #222;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem 2.5rem 1rem;
+  min-height: 100vh;
+  background: #f6fbff;
+}
+
+.page-title {
+  font-size: 2.2rem;
+  color: #1769aa;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 10px #b8dafb44;
+}
+
+.page-content {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px #1976d229;
+  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 1.2rem;
+}
+
+.back-btn {
+  margin: 2rem 0 1.2rem 0;
+  padding: 0.8rem 1.8rem;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 1.8rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 3px 18px #1976d231;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+}
+.back-btn:hover {
+  background: #1565c0;
+  box-shadow: 0 8px 28px #1976d245;
+  transform: scale(1.04);
+}
+
+/* Estilo para tablas bonitas y modernas */
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.app-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-size: 1.15rem;
+  background: #fafdff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px #1976d229;
+}
+
+.app-table th,
+.app-table td {
+  padding: 0.85rem 1.2rem;
+  border-bottom: 1px solid #e6ecf2;
+  text-align: left;
+}
+
+.app-table th {
+  background: #e3f1fc;
+  color: #1769aa;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+}
+
+.app-table tr:last-child td {
+  border-bottom: none;
+}
+
+.app-table tbody tr:hover {
+  background: #eaf6ff;
+  transition: background 0.15s;
+}
+
+/* ==== Formularios Modernos ==== */
+.form-modern {
+  background: #fafdff;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px #1976d229;
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  margin: 2rem auto 2.5rem auto;
+  max-width: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.1rem;
+}
+
+.form-modern h2, .form-modern h3 {
+  color: #1976d2;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+}
+
+.form-modern input,
+.form-modern select {
+  padding: 0.9rem 1.2rem;
+  border: 1.3px solid #b8c7e2;
+  border-radius: 1.2rem;
+  font-size: 1.11rem;
+  background: #fff;
+  margin-bottom: 0.5rem;
+  outline: none;
+  transition: border 0.18s;
+}
+.form-modern input:focus, .form-modern select:focus {
+  border: 1.7px solid #1976d2;
+  background: #f2f9ff;
+}
+
+.form-modern button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 1.3rem;
+  padding: 0.95rem 1.8rem;
+  font-weight: 700;
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.15s, transform 0.13s;
+  box-shadow: 0 2px 12px #1976d233;
+}
+.form-modern button:hover, .form-modern button:focus {
+  background: #1253a3;
+  transform: scale(1.04);
+}
+
+.form-modern .success {
+  color: #0ba346;
+  background: #e6f9ec;
+  border-radius: 0.8rem;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.04rem;
+}
+.form-modern .error {
+  color: #c20b33;
+  background: #ffe8ef;
+  border-radius: 0.8rem;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.04rem;
+}
+
+.formularios-contenedor {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 950px) {
+  .formularios-contenedor { flex-direction: column; gap: 1.4rem; }
+}
