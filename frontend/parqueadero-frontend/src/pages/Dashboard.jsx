@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCar, FaMotorcycle, FaListAlt, FaUser, FaThLarge } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import "./Dashboard.css"; // Asegúrate de importar el CSS
+import "./Dashboard.css";
 
 const MenuCard = ({ icon, label, to }) => {
   const navigate = useNavigate();

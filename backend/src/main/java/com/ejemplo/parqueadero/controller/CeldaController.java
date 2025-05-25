@@ -17,7 +17,7 @@ public class CeldaController {
     @Autowired
     private CeldaService celdaService;
 
-    // Endpoint para retornar todas las celdas en formato DTO (con información del vehículo si está ocupada)
+    // Endpoint para retornar todas las celdas en formato DTO 
     @GetMapping("/dto")
     public List<CeldaDTO> obtenerCeldasDTO() {
         List<Celda> celdas = celdaService.obtenerTodas();

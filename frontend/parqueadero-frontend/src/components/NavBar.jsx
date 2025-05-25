@@ -1,8 +1,9 @@
 import { useLocation, Link } from "react-router-dom";
-import "./NavBar.css"; // Recuerda crear este archivo, abajo te lo dejo
+import "./NavBar.css"; 
 
 function NavBar() {
   const location = useLocation();
+  
   // Ocultar menú en Dashboard y Home
   if (location.pathname === "/dashboard" || location.pathname === "/") return null;
 

@@ -13,7 +13,7 @@ public class UsuarioController {
     private final UsuarioService usuarioService;
 
     @Autowired
-    private UsuarioRepository usuarioRepository; // <-- Agrega esta línea
+    private UsuarioRepository usuarioRepository; 
 
     public UsuarioController(UsuarioService usuarioService) {
         this.usuarioService = usuarioService;
@@ -38,11 +38,6 @@ public class UsuarioController {
     public Usuario obtenerUsuarioPorCedula(@PathVariable int cedula) {
         return usuarioService.findUsuarioByCedula(cedula);
     }
-
-    //@PutMapping("/actualizar/{id}")
-    //public Usuario actualizarUsuario(@PathVariable Long id, @RequestBody Usuario usuarioActualizado) {
-    //return usuarioService.updateUsuario(id, usuarioActualizado);
-
 
     //Temporal
     @DeleteMapping("/actualizar/{id}")

@@ -34,24 +34,6 @@ public class RegistroController {
         this.registroRepository = registroRepository;
     }
 
-    // Registrar entrada por placa (mejorado)
-    /*@PostMapping("/entrada")
-    public ResponseEntity<?> registrarEntrada(@RequestBody RegistroEntradaDTO dto) {
-        Optional<Vehiculo> optionalVehiculo = vehiculoRepository.findByPlaca(dto.getPlaca());
-
-        if (optionalVehiculo.isEmpty()) {
-            return ResponseEntity.badRequest().body("No existe un vehículo con la placa: " + dto.getPlaca());
-        }
-
-        Vehiculo vehiculo = optionalVehiculo.get();
-
-        try {
-            Registros registro = registroService.registrarEntrada(vehiculo.getId(), dto.getCeldaId());
-            return ResponseEntity.ok(registro);
-        } catch (RuntimeException ex) {
-            return ResponseEntity.badRequest().body(ex.getMessage());
-        }
-    }*/
 
     // Importa DTO sencillo para recibir solo placa, o usa un String directo
 

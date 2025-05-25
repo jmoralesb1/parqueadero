@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// Cambia el host si tu backend está en otra IP o puerto
+// PORT
 const BASE_URL = "http://localhost:8080";
 
 // Obtener vehículos actualmente en parqueadero

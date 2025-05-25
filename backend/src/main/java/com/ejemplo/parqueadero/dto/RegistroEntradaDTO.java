@@ -24,6 +24,4 @@ public class RegistroEntradaDTO {
     public void setCeldaId(Long celdaId) {
         this.celdaId = celdaId;
     }
-
-    
 }

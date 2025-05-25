@@ -18,15 +18,15 @@ import com.ejemplo.parqueadero.repository.UsuarioRepository;
 @RequestMapping("/vehiculos")
 public class VehiculoController {
     private final VehiculoRepository vehiculoRepository;
-    private final UsuarioRepository usuarioRepository; // Agrega esto
+    private final UsuarioRepository usuarioRepository; 
 
-    // Modifica el constructor para recibir ambos repositorios
+    //constructor para recibir ambos repositorios
     public VehiculoController(VehiculoRepository vehiculoRepository, UsuarioRepository usuarioRepository) {
         this.vehiculoRepository = vehiculoRepository;
         this.usuarioRepository = usuarioRepository;
     }
 
-    // filepath: c:\Users\jaide\OneDrive\Escritorio\PARQUEADERO\backend\src\main\java\com\ejemplo\parqueadero\Controller\VehiculoController.java
+    // Endpoint para crear un nuevo vehículo
     @PostMapping
     public Vehiculo crearVehiculo(@RequestBody Vehiculo vehiculo) {
         System.out.println("Tipo recibido: " + vehiculo.getTipo()); // <-- Agrega esto
@@ -38,6 +38,7 @@ public class VehiculoController {
         return vehiculoRepository.save(vehiculo);
     }
 
+    
     @PostMapping("/registrar-con-cedula")
     public Vehiculo crearVehiculoConCedula(@RequestBody Vehiculo vehiculo, @RequestParam Long cedula) {
         Usuario usuario = usuarioRepository.findByCedula(cedula)

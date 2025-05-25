@@ -4,7 +4,7 @@ public class CeldaDTO {
     private Long id;
     private String estado;
     private String tipo;
-    private VehiculoDTO vehiculo; // Puede ser null si está libre
+    private VehiculoDTO vehiculo;
 
     // Constructor
     public CeldaDTO(Long id, String estado, String tipo, VehiculoDTO vehiculo) {

@@ -13,7 +13,7 @@ function RegistrosPage() {
   return (
     <div className="page-container">
       <h1 className="page-title">Gestión de Entradas y Salidas</h1>
-      {/* Puedes ponerlo arriba, abajo o entre los componentes */}
+      {/* - */}
       <HistorialPorPlaca />
       <div className="page-content">
         <RegistroForm onRegistroCambiado={handleRegistroCambiado} />
