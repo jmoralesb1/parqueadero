@@ -11,8 +11,9 @@ function NavBar() {
   const links = [
     { path: "/vehiculos", label: "Vehículos" },
     { path: "/celdas", label: "Celdas" },
-    { path: "/registros", label: "Registros" },
     { path: "/usuarios", label: "Usuarios" },
+    { path: "/registros", label: "Registros" },
+    { path: "/pagos", label: "Pagos" },
     { path: "/dashboard", label: "Dashboard" },
   ];
 

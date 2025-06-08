@@ -1,9 +1,12 @@
 package com.ejemplo.parqueadero.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.ejemplo.parqueadero.model.Usuario;
+import com.ejemplo.parqueadero.model.Vehiculo;
 import com.ejemplo.parqueadero.repository.UsuarioRepository;
+import com.ejemplo.parqueadero.repository.VehiculoRepository;
 import com.ejemplo.parqueadero.service.UsuarioService;
 import java.util.List;
 
@@ -56,4 +59,25 @@ public class UsuarioController {
         usuario.setRol(usuarioActualizado.getRol());
         return usuarioRepository.save(usuario);
     }
+
+    @GetMapping("/listar")
+    public List<Usuario> listarUsuarios() {
+        return usuarioRepository.findAll();
+    }
+
+    @Autowired
+    private VehiculoRepository vehiculoRepository; 
+
+    @GetMapping("/por-placa")
+    public ResponseEntity<Usuario> getUsuarioPorPlaca(@RequestParam String placa) {
+        Vehiculo vehiculo = vehiculoRepository.findByPlaca(placa)
+            .orElseThrow(() -> new RuntimeException("NO_ENCONTRADO"));
+        Usuario usuario = vehiculo.getUsuario();
+        if (usuario == null) {
+            throw new RuntimeException("USUARIO_NO_ENCONTRADO");
+        }
+        return ResponseEntity.ok(usuario);
+}
+
+
 }

@@ -2,15 +2,10 @@ package com.ejemplo.parqueadero.controller;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional; // Import correcto
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import com.ejemplo.parqueadero.dto.RegistroEntradaDTO;
 import com.ejemplo.parqueadero.model.Registros;
-import com.ejemplo.parqueadero.model.Vehiculo;
 import com.ejemplo.parqueadero.repository.RegistroRepository;
 import com.ejemplo.parqueadero.repository.VehiculoRepository;
 import com.ejemplo.parqueadero.service.RegistroService;
@@ -19,8 +14,6 @@ import com.ejemplo.parqueadero.service.RegistroService;
 @RequestMapping("/registro")
 public class RegistroController {
 
-    @Autowired
-    private VehiculoRepository vehiculoRepository;
 
     @Autowired
     private RegistroService registroService;
@@ -30,13 +23,11 @@ public class RegistroController {
 
     public RegistroController(RegistroService registroService, VehiculoRepository vehiculoRepository, RegistroRepository registroRepository) {
         this.registroService = registroService;
-        this.vehiculoRepository = vehiculoRepository;
         this.registroRepository = registroRepository;
     }
 
 
     // Importa DTO sencillo para recibir solo placa, o usa un String directo
-
     @PostMapping("/entrada/placa/{placa}")
     public ResponseEntity<?> registrarEntradaPorPlaca(@PathVariable String placa) {
         try {

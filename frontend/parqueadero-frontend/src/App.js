@@ -7,6 +7,7 @@ import Usuarios from "./pages/UsuariosPage";
 import Celdas from "./pages/CeldasPage";
 import Registros from "./pages/RegistrosPage";
 import ResumenPanel from "./components/ResumenPanel";
+import PagosPage from "./pages/PagosPage";
 import "./styles/AppTheme.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/celdas" element={<Celdas />} />
         <Route path="/registros" element={<Registros />} />
         <Route path="/resumen" element={<ResumenPanel />} />
+        <Route path="/pagos" element={<PagosPage />} />
       </Routes>
     </div>
   );

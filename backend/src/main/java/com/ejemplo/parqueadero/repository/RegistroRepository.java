@@ -27,7 +27,6 @@ public interface RegistroRepository extends JpaRepository<Registros, Long>{
     long countByFechaSalidaBetween(LocalDateTime inicio, LocalDateTime fin);
     long countByFechaEntrada(LocalDateTime fechaEntrada); // opcional
     long countByFechaSalida(LocalDateTime fechaSalida);   // opcional
-
-
+    Optional<Registros> findTopByVehiculoPlacaOrderByFechaEntradaDesc(String placa);
 }
 

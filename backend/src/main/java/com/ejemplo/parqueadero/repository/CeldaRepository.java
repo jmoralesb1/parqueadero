@@ -11,6 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CeldaRepository extends JpaRepository<Celda, Long> {
 
+    
     Celda findFirstByEstado(EstadoCelda estado);
     Optional<Celda> findFirstByTipoAndEstado(TipoCelda tipo, EstadoCelda estado);
     List<Celda> findByEstado(String estado);

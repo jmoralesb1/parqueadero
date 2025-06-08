@@ -27,6 +27,7 @@ const Dashboard = () => (
       <MenuCard icon={<FaListAlt size={60} />} label="Registros" to="/registros" />
       <MenuCard icon={<FaUser size={60} />} label="Usuarios" to="/usuarios" />
       <MenuCard icon={<FaThLarge size={60} />} label="Resumen" to="/resumen" />
+      <MenuCard icon={<FaListAlt size={60} />} label="Pagos" to="/pagos" />
     </div>
   </div>
 );
